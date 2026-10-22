@@ -1,32 +1,61 @@
-# Build artifacts
+# ==============================================================================
+# ESP-IDF Build Artifacts
+# ==============================================================================
 build/
+**/build/
+examples/*/build/
+managed_components/
+**/managed_components/
+examples/*/managed_components/
+dependencies.lock
+**/dependencies.lock
+examples/*/dependencies.lock
 sdkconfig
+**/sdkconfig
+examples/*/sdkconfig
 sdkconfig.old
-*.pyc
-__pycache__/
+**/sdkconfig.old
+examples/*/sdkconfig.old
 
-# IDE
-.vscode/
-.idea/
-.clangd/
-.clangd
+# ==============================================================================
+# Generated Files
+# ==============================================================================
+tools/font_build_temp/
+
+# ==============================================================================
+# Python
+# ==============================================================================
+*.pyc
+*.py[cod]
+__pycache__/
+**/__pycache__/
+.venv/
+venv/
+
+# ==============================================================================
+# IDE and Editor
+# ==============================================================================
 *.swp
 *.swo
 *~
+.clangd
+.clangd/
+.vscode/
+.idea/
 
-# ESP-IDF
-managed_components/
-dependencies.lock
-
-# OS
+# ==============================================================================
+# OS Generated Files
+# ==============================================================================
+# macOS
 .DS_Store
+
+# Windows
 Thumbs.db
 
-# Examples build
-examples/*/build/
-examples/*/sdkconfig
-examples/*/sdkconfig.old
-examples/*/managed_components/
-examples/*/dependencies.lock
-# Font generation temp files
-tools/font_build_temp/
+# ==============================================================================
+# Reference and Archive Code
+# ==============================================================================
+.archive/
+.docs/
+.old_code/
+.reference_codes/
